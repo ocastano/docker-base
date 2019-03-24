@@ -18,7 +18,6 @@ ADD ./src /app
 ADD ./assets /assets
 
 RUN chown -R $DEVELOPER:$DEVELOPER /app
-RUN chown -R $DEVELOPER:$DEVELOPER /app/*
 RUN chown -R $DEVELOPER:$DEVELOPER /assets
 RUN chmod +x /assets/entrypoint.sh
 
