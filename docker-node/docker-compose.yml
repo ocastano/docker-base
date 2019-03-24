@@ -1,0 +1,16 @@
+
+version: '3'
+services:
+  ocastano-node:
+    build: 
+      context: .
+      args:        
+        DEVELOPER: ${USER}
+    container_name: ocastano-node
+    ports:
+     - "7000:7000"
+    volumes:
+      - ./src:/app
+    working_dir: /app
+    user: ${USER}
+    tty: true
